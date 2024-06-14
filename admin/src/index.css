@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  /* background: linear-gradient(rgba(107, 105, 105, 0.6),rgba(0,0,0,.6)),url("https://img.freepik.com/free-vector/engraving-hand-drawn-mushroom-pattern_23-2148901998.jpg?t=st=1718351280~exp=1718354880~hmac=68bb97049586ad1e8244d8ebb23ea77da631426f31104ab6ebfc9105ff08a3ef&w=740") ; */
+  /* background: #D1D8C5; */
+}
+.glass{
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
