@@ -4,7 +4,10 @@ import PDFDocument from 'pdfkit';
 export const createOrder = async (req, res) => {
     try {
         const { firmId, items, totalAmount } = req.body;
-        const userId = req.userId; 
+        const userId = req.body.userId || req.userId;
+        if (!userId) {
+            throw new Error('User ID is required.');
+        }
         const order = new Order({
             user: userId,
             firm: firmId,
@@ -14,9 +17,10 @@ export const createOrder = async (req, res) => {
         await order.save();
         res.status(201).json(order);
     } catch (error) {
-        res.status(500).json({ message: 'Failed to create order', error:error.message });
+        res.status(500).json({ message: 'Failed to create order', error: error.message });
     }
 };
+
 
 
 export const getOrders = async (req, res) => {

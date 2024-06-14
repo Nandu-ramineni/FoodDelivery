@@ -1,4 +1,4 @@
-// Actions/orderActions.js
+
 import axios from 'axios';
 import * as actionTypes from '../Constants/orderConstant';
 

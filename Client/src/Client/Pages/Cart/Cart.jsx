@@ -59,14 +59,14 @@ const Cart = () => {
             quantity: item.quantity,
             price: parseFloat(item.price) * item.quantity
         }));
-        const user = localStorage.getItem('userId');
+        const userId = localStorage.getItem('userId');
         const token = localStorage.getItem('token');
         if (cartItems.length === 0 || !cartItems[0].firm) {
             console.error('Cart is empty or firm information is missing');
             return;
         }
         const orderData = {
-            userId: user,
+            userId,
             firmId: cartItems[0].firm,
             items: orderItems,
             totalAmount: totalToPay
