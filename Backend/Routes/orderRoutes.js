@@ -1,9 +1,9 @@
 import express from 'express';
-import { verifyTokenUser } from '../Middlewares/verifyToken.js';
+// import { verifyTokenUser } from '../Middlewares/verifyToken.js';
 import { createOrder, generateInvoice, getInvoice, getOrderById, getOrders, getOrdersByFirm,  getOrdersByUserId, updateOrderStatus } from '../Controllers/orderController.js';
 
 const router = express.Router();
-router.post('/create',verifyTokenUser,createOrder);
+router.post('/create',createOrder);
 router.get('/getOrders',getOrders)
 router.get('/getOrderById/:id',getOrderById)
 router.get('/getOrdersByUser/:userId',getOrdersByUserId);
