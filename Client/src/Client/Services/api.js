@@ -2,7 +2,8 @@ import axios from "axios";
 
 // const URI = "http://localhost:7000";
 const URI = "https://fooddelivery-xe7w.onrender.com";
-export const URL = "http://localhost:7000"; 
+// export const URL = "http://localhost:7000"; 
+export const URL = "https://fooddelivery-xe7w.onrender.com"; 
 
 export const authenticateSignUp = async(data,token) => {
     try {
