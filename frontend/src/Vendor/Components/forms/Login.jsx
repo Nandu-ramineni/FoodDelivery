@@ -39,7 +39,8 @@ const Login = () => {
                 setAccount(vendorUsername);
                 setData(LoginInitialValues);
                 navigate('/welcome');
-                const vendorResponse = await fetch(`http://localhost:7000/vendor/getVendorById/${vendorId}`);
+                // const vendorResponse = await fetch(`http://localhost:7000/vendor/getVendorById/${vendorId}`);
+                const vendorResponse = await fetch(`https://fooddelivery-xe7w.onrender.com/vendor/getVendorById/${vendorId}`);
                 const vendorData = await vendorResponse.json();
                 if (vendorResponse.status === 200) {
                     const vendorFirmId = vendorData.vendorFirmId;
