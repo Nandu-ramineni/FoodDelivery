@@ -25,11 +25,8 @@ export const authenticateLogin = async(data,token) =>{
 }
 
 export const createOrder = async (orderData, token) => {
-    const response = await axios.post(`${URI}/order/create`, orderData, {
-        headers: {
-            token: token
-        }
-    });
+    const config= {headers: {Authorization: `Bearer ${token}`}};
+    const response = await axios.post(`${URI}/order/create`, orderData,);
     return response.data;
 };
 
