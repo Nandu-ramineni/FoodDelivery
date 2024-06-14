@@ -2,7 +2,7 @@
 # Yumz-Food Order & Delivery Platform
 ## Summary
 
-The **Project Name** is a comprehensive web application designed to streamline interactions between users, vendors, and administrators. Users can browse and purchase products, vendors can manage their inventory and orders, and administrators have complete oversight of the system. Built with a modern tech stack including React, Node.js, Express, and MongoDB, this project aims to deliver a robust, scalable, and user-friendly platform.
+The **Yumz** is a comprehensive web application designed to streamline interactions between users, vendors, and administrators. Users can browse and purchase products, vendors can manage their inventory and orders, and administrators have complete oversight of the system. Built with a modern tech stack including React, Node.js, Express, and MongoDB, this project aims to deliver a robust, scalable, and user-friendly platform.
 
 ## Table of Contents
 
