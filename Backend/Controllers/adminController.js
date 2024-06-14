@@ -23,4 +23,4 @@ export const AuthenticateAdmin = async (req, res) => {
 }
 
 
-// insertAdmin('admin', 'admin@yumz');
+
