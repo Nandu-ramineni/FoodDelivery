@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Link to="/search" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><IoSearch />Search</Link>
                 <Link to="/offers" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><TbRosetteDiscount />Offers</Link>
                 <Link to="/help" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><BiSupport />Help</Link>
-                <Link to="http://localhost:5173/" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Be a Vendor</Link>
+                <Link to="https://yumzvendordashboard.netlify.app/" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Be a Vendor</Link>
             </div>
             <div className="hidden md:block">
                 <CustomButtons />
@@ -43,17 +43,11 @@ const Navbar = () => {
             </div>
             {menuOpen && (
                 <div className="absolute top-16 left-0 w-full bg-white shadow-md rounded-br-2xl rounded-bl-2xl md:hidden flex flex-col items-center gap-6 py-4">
-                    <select className="rounded-lg px-4 py-1 w-60 bg-gray-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#8EC44C] transition ease-in-out duration-300">
-                        <option value="" disabled selected>Select Location</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Nalgonda">Nalgonda</option>
-                        <option value="Miryalaguda">Miryalaguda</option>
-                    </select>
                     <Link to="/" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><GoHome />Home</Link>
                     <Link to="/search" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><IoSearch />Search</Link>
                     <Link to="/offers" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><TbRosetteDiscount />Offers</Link>
                     <Link to="/help" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><TbRosetteDiscount />Help</Link>
-                    <Link to="/vendor" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Become a Vendor</Link>
+                    <Link to="https://yumzvendordashboard.netlify.app/" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Be a Vendor</Link>
                     
                 </div>
             )}
