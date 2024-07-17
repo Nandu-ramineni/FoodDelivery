@@ -74,7 +74,7 @@ const Cart = () => {
         console.log('Order Data:', orderData);  
         try {
             const orderResponse = await createOrder(orderData, token);
-            console.log('Order created:', orderResponse.data);
+            console.log('Order created:', orderResponse);
             const paymentResponse = await initiatePayment(orderResponse._id, totalToPay );
             console.log('Payment initiated:', paymentResponse);
             const options = {

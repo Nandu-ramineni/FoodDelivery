@@ -97,9 +97,9 @@ const Vendors = () => {
                 {filteredVendors.length > 0 ? (
                     filteredVendors.map((vendor) => (
                         <div key={vendor._id} className="p-4">
-                            <div className="bg-white p-4 rounded-lg shadow-lg">
+                            <div className="bg-white p-4 rounded-lg shadow-lg truncate">
                                 <h3 className="text-lg font-medium">Name: {vendor.username}</h3>
-                                <a href={`mailto:${vendor.email}`} className="text-gray-600 text-sm">Email: {vendor.email}</a>
+                                <a href={`mailto:${vendor.email}`} className="text-gray-600 text-sm truncate">Email:{vendor.email}</a>
                                 <div className="mt-2">
                                     {vendor.firm.map((firm) => (
                                         <div key={firm._id} className="mt-2 truncate">
