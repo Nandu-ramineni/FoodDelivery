@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Link to="/search" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><IoSearch />Search</Link>
                 <Link to="/offers" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><TbRosetteDiscount />Offers</Link>
                 <Link to="/help" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><BiSupport />Help</Link>
-                <Link to="http://localhost:5173/" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Be a Vendor</Link>
+                <Link to="https://yumzvendordashboard.netlify.app/" className="flex items-center gap-2 text-lg font-medium text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Be a Vendor</Link>
             </div>
             <div className="hidden md:block">
                 <CustomButtons />
@@ -53,7 +53,7 @@ const Navbar = () => {
                     <Link to="/search" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><IoSearch />Search</Link>
                     <Link to="/offers" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><TbRosetteDiscount />Offers</Link>
                     <Link to="/help" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><TbRosetteDiscount />Help</Link>
-                    <Link to="/vendor" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Become a Vendor</Link>
+                    <Link to="https://yumzvendordashboard.netlify.app/" className="flex items-center gap-2 text-xl text-gray-700 hover:text-[#8EC44C] transition ease-in-out duration-300"><MdOutlineSell />Become a Vendor</Link>
                     
                 </div>
             )}
