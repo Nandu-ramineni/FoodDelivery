@@ -127,7 +127,7 @@ FoodDelivery is a comprehensive food ordering and delivery application built usi
 
 ## Usage
 
-1. **Open your browser and navigate to `http://localhost:3000`** to access the FoodDelivery application.
+1. **Open your browser and navigate to `http://localhost:5173`** to access the FoodDelivery application.
 2. **Sign Up or Log In** to start exploring restaurants and placing orders.
 3. **Browse Restaurants**: Use the search and filter options to find restaurants.
 4. **Place Orders**: Select items from the menu and complete your order.
