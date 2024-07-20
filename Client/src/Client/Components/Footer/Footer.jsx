@@ -105,7 +105,8 @@ const Footer = () => {
                 </div>
                 </div>
                 <div>
-                    <p className="font-medium">&copy; {new Date().getFullYear()} V-Eats. All rights reserved.</p>
+                    <p className="font-medium">&copy; {new Date().getFullYear()} YumZ. All rights reserved.</p> <br />
+                    <p className="text-gray-400">Designed and Developed by <a href="https://nanduvarmaportfolio.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">Nandu Varma</a></p>
                 </div>
             </div>
         </footer>
