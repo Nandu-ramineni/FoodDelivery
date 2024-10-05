@@ -13,6 +13,7 @@ const SignUpInitialValues = {
 
 const SignUp = () => {
     const [data, setData] = useState(SignUpInitialValues);
+    const [loading, setLoading] = useState(false);
     // const [error, setError] = useState(false);
     const navigate = useNavigate();
     const changeHandler = (e) => {
@@ -20,11 +21,16 @@ const SignUp = () => {
     }
     const submitHandler = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        try{
         const response = await authenticateSignUp(data);
         navigate('/login');
         console.log(response);
         setData(SignUpInitialValues);
-
+        } catch(err){
+            console.log("error");
+            setLoading(false);
+        }
     }
     return (
         <div className="flex justify-center items-center w-full bg-gray-100 ">
