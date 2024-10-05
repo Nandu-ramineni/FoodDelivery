@@ -55,7 +55,7 @@ const Footer = () => {
                             <li className="mb-2"><Link to='/offers' className="hover:text-green-500">Offers</Link></li>
                             <li className="mb-2"><Link to='/help' className="hover:text-green-500">Help</Link></li>
                             <li className="mb-2"><Link to='/profile/support' className="hover:text-green-500">Contact Us</Link></li>
-                            <li className="mb-2"><Link to='/' className="hover:text-green-500">Be a Vendor</Link></li>
+                            <li className="mb-2"><Link to='https://yumzvendordashboard.netlify.app/' className="hover:text-green-500">Be a Vendor</Link></li>
                         </ul>
                     </div>
                     <div>
