@@ -13,6 +13,7 @@ const Cart = () => {
     const navigate = useNavigate();
     const [coupon, setCoupon] = useState('');
     const [discount, setDiscount] = useState(0);
+    const [loading,setLoading] = useState(false);
 
     useEffect(() => {
         const savedCartItems = localStorage.getItem('cartItems');
@@ -54,6 +55,7 @@ const Cart = () => {
     }, [cartItems]);
 
     const handleProceedToPay = async () => {
+        setLoading(true);
         const orderItems = cartItems.map(item => ({
             product: item._id,
             quantity: item.quantity,
@@ -120,6 +122,7 @@ const Cart = () => {
 
         } catch (error) {
             console.error('Error creating order or initiating payment:', error);
+            setLoading(false);
         }
     };
 
@@ -135,7 +138,7 @@ const Cart = () => {
                     </div>
                     <h3 className='text-xl font-semibold mb-4'>Choose payment method</h3>
                     <div className='border border-gray-300 rounded-lg p-4 mb-6'>
-                        <button onClick={handleProceedToPay} className='w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg'>PROCEED TO PAY</button>
+                        <button onClick={handleProceedToPay} className='w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg'>{loading ? <p>Loading</p>:"PROCEED TO PAY"}</button>
                     </div>
                 </div>
                 <div className='w-full lg:w-2/5'>
