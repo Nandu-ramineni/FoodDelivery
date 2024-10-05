@@ -22,7 +22,7 @@ const Cart = () => {
         } else {
             dispatch({ type: 'GET_CART_SUCCESS', payload: [] }); 
         }
-    }, [dispatch]);
+    }, [dispatch,cartItems]);
 
     const handleRemoveFromCart = (id) => {
         dispatch(removeFromCart(id));
