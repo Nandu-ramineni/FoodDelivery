@@ -88,7 +88,7 @@ FoodDelivery is a comprehensive food ordering and delivery application built usi
      ```
      MONGO_URI=your_mongodb_connection_string
      PORT=5000
-     SECRET_KEY=your_secret_key
+     JWT_SECRET_KEY=your_secret_key
      ```
 
 4. **Install backend dependencies:**
@@ -106,13 +106,13 @@ FoodDelivery is a comprehensive food ordering and delivery application built usi
 6. **Start the backend server:**
    ```bash
    cd ../backend
-   npm start
+   npm run dev
    ```
 
 7. **Start the frontend server:**
    ```bash
    cd ../frontend
-   npm start
+   npm run dev
    ```
 
 8. **(Optional) Run with Docker:**
