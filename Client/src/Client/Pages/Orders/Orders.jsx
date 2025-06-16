@@ -31,6 +31,7 @@ const Orders = () => {
             console.log("Error while downloading invoice", error);
         }
     };
+    const sortedOrders = orders ? [...orders].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) : [];
 
     return (
         <div className="w-full h-full p-4">
@@ -40,9 +41,9 @@ const Orders = () => {
                 <CgShoppingBag /> Orders
             </h1>
             <div className="items h-[85vh] overflow-y-auto" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-                {orders && orders.length > 0 ? (
+                {sortedOrders && sortedOrders.length > 0 ? (
                     <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        {orders.map(order => (
+                        {sortedOrders.map(order => (
                             <div key={order._id} className="bg-white shadow-lg rounded-lg p-6 text-md">
                                 <p className="text-gray-700 mb-2"><strong>Restaurant:</strong> {order.firm.firmName}</p>
                                 <div className="flex items-center mb-2">

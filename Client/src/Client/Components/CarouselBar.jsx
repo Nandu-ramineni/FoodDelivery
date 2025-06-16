@@ -29,7 +29,12 @@ const CarouselBar = () => {
 
     const indexOfLastVendor = currentPage * vendorsPerPage;
     const indexOfFirstVendor = indexOfLastVendor - vendorsPerPage;
-    const shuffledVendors = vendors && vendors.vendors ? shuffleArray(vendors.vendors) : [];
+    const filteredVendors = vendors && vendors.vendors
+    ? vendors.vendors.filter(vendor => Array.isArray(vendor.firm) && vendor.firm.length > 0)
+    : [];
+
+const shuffledVendors = shuffleArray([...filteredVendors]);
+
     const currentVendors = shuffledVendors.slice(indexOfFirstVendor, indexOfLastVendor);
 
     const paginate = (direction) => {
