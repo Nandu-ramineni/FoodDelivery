@@ -53,3 +53,13 @@ export const deleteUserById = async(userId,token) => {
         console.log("Error while calling deleteUserById api",error);
     }
 }
+
+export const updatePassword = async(data,token) =>{
+    try {
+        const config= {headers: {Authorization: `Bearer ${token}`}};
+        const response = await axios.post(`${URL}/admin/updatePassword`,data,config);
+        return response;
+    } catch (error) {
+        console.log("Error while calling updatePassword api",error);
+    }
+}

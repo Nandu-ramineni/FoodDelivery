@@ -1,8 +1,8 @@
 import axios from "axios";
 // const URL = "http://localhost:7000";
-const URL = "https://fooddelivery-xe7w.onrender.com";
+const URL = "https://fooddelivery-rsb8.onrender.com";
 // export const API_URL = "http://localhost:7000"
-export const API_URL = "https://fooddelivery-xe7w.onrender.com"
+export const API_URL = "https://fooddelivery-rsb8.onrender.com"
 export const authenticateSignUp = async(data,token) => {
     try {
         const config= {headers: {Authorization: `Bearer ${token}`}};

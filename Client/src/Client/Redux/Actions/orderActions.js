@@ -3,7 +3,7 @@ import axios from 'axios';
 import * as actionTypes from '../Constants/orderConstant';
 
 // const URL = "http://localhost:7000";
-const URL = "https://fooddelivery-xe7w.onrender.com";
+const URL = "https://fooddelivery-rsb8.onrender.com";
 
 export const getOrders = (userId) => async (dispatch) => {
     try {

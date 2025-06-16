@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCog } from "react-icons/fa";
 import bg from '../../assets/bg.jpg';
+import { updatePassword } from "../../services/api";
 
 const Settings = () => {
     const [adminPassword, setAdminPassword] = useState("");
@@ -8,8 +9,14 @@ const Settings = () => {
     const [firmAddress, setFirmAddress] = useState("");
     const [firmPhone, setFirmPhone] = useState("");
 
-    const handleAdminPasswordChange = () => {
-        alert("Admin password updated successfully");
+    const handleAdminPasswordChange = async() => {
+        const username = localStorage.getItem("admin");
+        try {
+            const response = await updatePassword({ username, password: adminPassword });
+            console.log(response);
+        } catch (error) {
+            console.log("Error while calling updatePassword api", error);
+        }
     };
 
     const handleFirmDetailsChange = () => {

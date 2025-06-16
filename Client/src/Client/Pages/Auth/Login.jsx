@@ -15,7 +15,7 @@ const Login = () => {
     const navigate = useNavigate();
     const { setAccount } = useContext(DataContext);
     const [error, setError] = useState(false);
-
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
@@ -30,7 +30,9 @@ const Login = () => {
     }
 
     const submitHandler = async (e) => {
+        
         e.preventDefault();
+        setLoading(true);
         try {
             const response = await authenticateLogin(data);
             console.log(response);
@@ -49,6 +51,7 @@ const Login = () => {
             }
         } catch (error) {
             console.error("Error during login:", error);
+            setLoading(false);
         }
     }
 
@@ -101,7 +104,7 @@ const Login = () => {
                         </div>
                         {error && <p className="text-red-500 text-sm">Invalid Credentials</p>}
                         <button className="w-full text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-md px-5 py-2.5 text-center me-2 mb-2">
-                            Login
+                            {loading ? 'Loading...' : 'Login'}
                         </button>
                     </form>
                     <div className="flex gap-3 mt-6 justify-center">

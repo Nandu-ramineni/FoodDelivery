@@ -2,7 +2,7 @@ import axios from "axios";
 import * as actionTypes from "../Constants/cartConstant.js";
 
 // const URL = "http://localhost:7000";
-const URL = "https://fooddelivery-xe7w.onrender.com";
+const URL = "https://fooddelivery-rsb8.onrender.com";
 
 export const addToCart = (productId, quantity, restaurantId) => async (dispatch) => {
     try {

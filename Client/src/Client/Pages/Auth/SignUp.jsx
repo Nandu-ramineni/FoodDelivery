@@ -13,6 +13,7 @@ const SignUpInitialValues = {
 
 const SignUp = () => {
     const [data, setData] = useState(SignUpInitialValues);
+    const [loading,setLoading] = useState(false);
     // const [error, setError] = useState(false);
     const navigate = useNavigate();
     const changeHandler = (e) => {
